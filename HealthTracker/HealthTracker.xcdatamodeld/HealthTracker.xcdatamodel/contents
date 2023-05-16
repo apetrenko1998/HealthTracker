@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22D68" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Dish" representedClassName="Dish" syncable="YES">
+        <attribute name="kcal" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="photo" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+    </entity>
+    <entity name="Ration" representedClassName="Ration" syncable="YES">
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="rationItems" toMany="YES" deletionRule="Nullify" destinationEntity="RationItem" inverseName="ration" inverseEntity="RationItem"/>
+    </entity>
+    <entity name="RationItem" representedClassName="RationItem" syncable="YES">
+        <attribute name="amount" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="dateAdded" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="dish" maxCount="1" deletionRule="Nullify" destinationEntity="Dish"/>
+        <relationship name="ration" maxCount="1" deletionRule="Nullify" destinationEntity="Ration" inverseName="rationItems" inverseEntity="Ration"/>
+    </entity>
+</model>

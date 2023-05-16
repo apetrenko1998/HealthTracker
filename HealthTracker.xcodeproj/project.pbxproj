@@ -1,0 +1,669 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FD5BDB402A02D8A8003B822B /* HealthTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5BDB3F2A02D8A8003B822B /* HealthTrackerApp.swift */; };
+		FD5BDB422A02D8A8003B822B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5BDB412A02D8A8003B822B /* ContentView.swift */; };
+		FD5BDB442A02D8A9003B822B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD5BDB432A02D8A9003B822B /* Assets.xcassets */; };
+		FD5BDB472A02D8A9003B822B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD5BDB462A02D8A9003B822B /* Preview Assets.xcassets */; };
+		FD5BDB492A02D8A9003B822B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5BDB482A02D8A9003B822B /* Persistence.swift */; };
+		FD5BDB4C2A02D8A9003B822B /* HealthTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD5BDB4A2A02D8A9003B822B /* HealthTracker.xcdatamodeld */; };
+		FDF8DC6C2A03DE5C00D566DA /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF8DC6B2A03DE5C00D566DA /* WidgetKit.framework */; };
+		FDF8DC6E2A03DE5C00D566DA /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF8DC6D2A03DE5C00D566DA /* SwiftUI.framework */; };
+		FDF8DC712A03DE5C00D566DA /* HealthTrackerWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DC702A03DE5C00D566DA /* HealthTrackerWidgetBundle.swift */; };
+		FDF8DC732A03DE5C00D566DA /* HealthTrackerWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DC722A03DE5C00D566DA /* HealthTrackerWidget.swift */; };
+		FDF8DC752A03DE5D00D566DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDF8DC742A03DE5D00D566DA /* Assets.xcassets */; };
+		FDF8DC792A03DE5D00D566DA /* HealthTrackerWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FDF8DC692A03DE5C00D566DA /* HealthTrackerWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FDF8DC812A03F3DA00D566DA /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DC802A03F3DA00D566DA /* StatisticsView.swift */; };
+		FDF8DC832A03F45C00D566DA /* FoodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DC822A03F45C00D566DA /* FoodListView.swift */; };
+		FDF8DC862A043FAC00D566DA /* DishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DC852A043FAC00D566DA /* DishView.swift */; };
+		FDF8DC882A0552D900D566DA /* AppColour.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DC872A0552D900D566DA /* AppColour.swift */; };
+		FDF8DC8B2A0648FC00D566DA /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DC8A2A0648FC00D566DA /* Dish.swift */; };
+		FDF8DC8D2A0656CC00D566DA /* Ration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DC8C2A0656CC00D566DA /* Ration.swift */; };
+		FDF8DC8F2A06DC3E00D566DA /* RationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DC8E2A06DC3E00D566DA /* RationView.swift */; };
+		FDF8DC922A06DC8900D566DA /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DC912A06DC8900D566DA /* RoundedCorner.swift */; };
+		FDF8DC942A06DFDB00D566DA /* RationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DC932A06DFDB00D566DA /* RationItem.swift */; };
+		FDF8DC962A06E80300D566DA /* FoodListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DC952A06E80300D566DA /* FoodListRow.swift */; };
+		FDF8DCBD2A0933E000D566DA /* Ration+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DCBC2A0933E000D566DA /* Ration+Extension.swift */; };
+		FDF8DCD02A0935F100D566DA /* Ration+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DCCA2A0935F100D566DA /* Ration+CoreDataClass.swift */; };
+		FDF8DCD12A0935F100D566DA /* Ration+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DCCB2A0935F100D566DA /* Ration+CoreDataProperties.swift */; };
+		FDF8DCD22A0935F100D566DA /* Dish+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DCCC2A0935F100D566DA /* Dish+CoreDataClass.swift */; };
+		FDF8DCD32A0935F100D566DA /* Dish+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DCCD2A0935F100D566DA /* Dish+CoreDataProperties.swift */; };
+		FDF8DCD42A0935F100D566DA /* RationItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DCCE2A0935F100D566DA /* RationItem+CoreDataClass.swift */; };
+		FDF8DCD52A0935F100D566DA /* RationItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DCCF2A0935F100D566DA /* RationItem+CoreDataProperties.swift */; };
+		FDF8DCD72A09364300D566DA /* RationItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DCD62A09364200D566DA /* RationItem+Extension.swift */; };
+		FDF8DCDA2A09380500D566DA /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DCD92A09380500D566DA /* Date+Extension.swift */; };
+		FDF8DCDC2A0971FA00D566DA /* AddDishModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DCDB2A0971FA00D566DA /* AddDishModalView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FDF8DC772A03DE5D00D566DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD5BDB342A02D8A8003B822B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDF8DC682A03DE5C00D566DA;
+			remoteInfo = HealthTrackerWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FDF8DC7A2A03DE5D00D566DA /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FDF8DC792A03DE5D00D566DA /* HealthTrackerWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FD5BDB3C2A02D8A8003B822B /* HealthTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD5BDB3F2A02D8A8003B822B /* HealthTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthTrackerApp.swift; sourceTree = "<group>"; };
+		FD5BDB412A02D8A8003B822B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FD5BDB432A02D8A9003B822B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FD5BDB462A02D8A9003B822B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FD5BDB482A02D8A9003B822B /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		FD5BDB4B2A02D8A9003B822B /* HealthTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HealthTracker.xcdatamodel; sourceTree = "<group>"; };
+		FDF8DC692A03DE5C00D566DA /* HealthTrackerWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HealthTrackerWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDF8DC6B2A03DE5C00D566DA /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		FDF8DC6D2A03DE5C00D566DA /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		FDF8DC702A03DE5C00D566DA /* HealthTrackerWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthTrackerWidgetBundle.swift; sourceTree = "<group>"; };
+		FDF8DC722A03DE5C00D566DA /* HealthTrackerWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthTrackerWidget.swift; sourceTree = "<group>"; };
+		FDF8DC742A03DE5D00D566DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FDF8DC762A03DE5D00D566DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDF8DC7E2A03DEA100D566DA /* HealthTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthTracker.entitlements; sourceTree = "<group>"; };
+		FDF8DC7F2A03DEFD00D566DA /* HealthTrackerWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthTrackerWidgetExtension.entitlements; sourceTree = "<group>"; };
+		FDF8DC802A03F3DA00D566DA /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		FDF8DC822A03F45C00D566DA /* FoodListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListView.swift; sourceTree = "<group>"; };
+		FDF8DC852A043FAC00D566DA /* DishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishView.swift; sourceTree = "<group>"; };
+		FDF8DC872A0552D900D566DA /* AppColour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColour.swift; sourceTree = "<group>"; };
+		FDF8DC8A2A0648FC00D566DA /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
+		FDF8DC8C2A0656CC00D566DA /* Ration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ration.swift; sourceTree = "<group>"; };
+		FDF8DC8E2A06DC3E00D566DA /* RationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RationView.swift; sourceTree = "<group>"; };
+		FDF8DC912A06DC8900D566DA /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
+		FDF8DC932A06DFDB00D566DA /* RationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RationItem.swift; sourceTree = "<group>"; };
+		FDF8DC952A06E80300D566DA /* FoodListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListRow.swift; sourceTree = "<group>"; };
+		FDF8DCBC2A0933E000D566DA /* Ration+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ration+Extension.swift"; sourceTree = "<group>"; };
+		FDF8DCCA2A0935F100D566DA /* Ration+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ration+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FDF8DCCB2A0935F100D566DA /* Ration+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ration+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FDF8DCCC2A0935F100D566DA /* Dish+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dish+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FDF8DCCD2A0935F100D566DA /* Dish+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dish+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FDF8DCCE2A0935F100D566DA /* RationItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RationItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FDF8DCCF2A0935F100D566DA /* RationItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RationItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FDF8DCD62A09364200D566DA /* RationItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RationItem+Extension.swift"; sourceTree = "<group>"; };
+		FDF8DCD92A09380500D566DA /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		FDF8DCDB2A0971FA00D566DA /* AddDishModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDishModalView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FD5BDB392A02D8A8003B822B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDF8DC662A03DE5C00D566DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDF8DC6E2A03DE5C00D566DA /* SwiftUI.framework in Frameworks */,
+				FDF8DC6C2A03DE5C00D566DA /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FD5BDB332A02D8A8003B822B = {
+			isa = PBXGroup;
+			children = (
+				FDF8DC7F2A03DEFD00D566DA /* HealthTrackerWidgetExtension.entitlements */,
+				FD5BDB3E2A02D8A8003B822B /* HealthTracker */,
+				FDF8DC6F2A03DE5C00D566DA /* HealthTrackerWidget */,
+				FDF8DC6A2A03DE5C00D566DA /* Frameworks */,
+				FD5BDB3D2A02D8A8003B822B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FD5BDB3D2A02D8A8003B822B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD5BDB3C2A02D8A8003B822B /* HealthTracker.app */,
+				FDF8DC692A03DE5C00D566DA /* HealthTrackerWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD5BDB3E2A02D8A8003B822B /* HealthTracker */ = {
+			isa = PBXGroup;
+			children = (
+				FDF8DCD82A0937F100D566DA /* Extensions */,
+				FDF8DC972A07DA5E00D566DA /* CoreData */,
+				FDF8DC902A06DC4B00D566DA /* Views */,
+				FDF8DC892A0648E400D566DA /* Models */,
+				FDF8DC7E2A03DEA100D566DA /* HealthTracker.entitlements */,
+				FDF8DC872A0552D900D566DA /* AppColour.swift */,
+				FD5BDB3F2A02D8A8003B822B /* HealthTrackerApp.swift */,
+				FD5BDB432A02D8A9003B822B /* Assets.xcassets */,
+				FD5BDB482A02D8A9003B822B /* Persistence.swift */,
+				FD5BDB4A2A02D8A9003B822B /* HealthTracker.xcdatamodeld */,
+				FD5BDB452A02D8A9003B822B /* Preview Content */,
+			);
+			path = HealthTracker;
+			sourceTree = "<group>";
+		};
+		FD5BDB452A02D8A9003B822B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FD5BDB462A02D8A9003B822B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FDF8DC6A2A03DE5C00D566DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FDF8DC6B2A03DE5C00D566DA /* WidgetKit.framework */,
+				FDF8DC6D2A03DE5C00D566DA /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FDF8DC6F2A03DE5C00D566DA /* HealthTrackerWidget */ = {
+			isa = PBXGroup;
+			children = (
+				FDF8DC702A03DE5C00D566DA /* HealthTrackerWidgetBundle.swift */,
+				FDF8DC722A03DE5C00D566DA /* HealthTrackerWidget.swift */,
+				FDF8DC742A03DE5D00D566DA /* Assets.xcassets */,
+				FDF8DC762A03DE5D00D566DA /* Info.plist */,
+			);
+			path = HealthTrackerWidget;
+			sourceTree = "<group>";
+		};
+		FDF8DC892A0648E400D566DA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FDF8DC8A2A0648FC00D566DA /* Dish.swift */,
+				FDF8DC8C2A0656CC00D566DA /* Ration.swift */,
+				FDF8DC932A06DFDB00D566DA /* RationItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FDF8DC902A06DC4B00D566DA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FDF8DC822A03F45C00D566DA /* FoodListView.swift */,
+				FDF8DC802A03F3DA00D566DA /* StatisticsView.swift */,
+				FDF8DC852A043FAC00D566DA /* DishView.swift */,
+				FDF8DC8E2A06DC3E00D566DA /* RationView.swift */,
+				FD5BDB412A02D8A8003B822B /* ContentView.swift */,
+				FDF8DC912A06DC8900D566DA /* RoundedCorner.swift */,
+				FDF8DC952A06E80300D566DA /* FoodListRow.swift */,
+				FDF8DCDB2A0971FA00D566DA /* AddDishModalView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FDF8DC972A07DA5E00D566DA /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				FDF8DCCA2A0935F100D566DA /* Ration+CoreDataClass.swift */,
+				FDF8DCCB2A0935F100D566DA /* Ration+CoreDataProperties.swift */,
+				FDF8DCCC2A0935F100D566DA /* Dish+CoreDataClass.swift */,
+				FDF8DCCD2A0935F100D566DA /* Dish+CoreDataProperties.swift */,
+				FDF8DCCE2A0935F100D566DA /* RationItem+CoreDataClass.swift */,
+				FDF8DCCF2A0935F100D566DA /* RationItem+CoreDataProperties.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		FDF8DCD82A0937F100D566DA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FDF8DCBC2A0933E000D566DA /* Ration+Extension.swift */,
+				FDF8DCD62A09364200D566DA /* RationItem+Extension.swift */,
+				FDF8DCD92A09380500D566DA /* Date+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FD5BDB3B2A02D8A8003B822B /* HealthTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD5BDB4F2A02D8A9003B822B /* Build configuration list for PBXNativeTarget "HealthTracker" */;
+			buildPhases = (
+				FD5BDB382A02D8A8003B822B /* Sources */,
+				FD5BDB392A02D8A8003B822B /* Frameworks */,
+				FD5BDB3A2A02D8A8003B822B /* Resources */,
+				FDF8DC7A2A03DE5D00D566DA /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDF8DC782A03DE5D00D566DA /* PBXTargetDependency */,
+			);
+			name = HealthTracker;
+			productName = HealthTracker;
+			productReference = FD5BDB3C2A02D8A8003B822B /* HealthTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FDF8DC682A03DE5C00D566DA /* HealthTrackerWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDF8DC7D2A03DE5D00D566DA /* Build configuration list for PBXNativeTarget "HealthTrackerWidgetExtension" */;
+			buildPhases = (
+				FDF8DC652A03DE5C00D566DA /* Sources */,
+				FDF8DC662A03DE5C00D566DA /* Frameworks */,
+				FDF8DC672A03DE5C00D566DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HealthTrackerWidgetExtension;
+			productName = HealthTrackerWidgetExtension;
+			productReference = FDF8DC692A03DE5C00D566DA /* HealthTrackerWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FD5BDB342A02D8A8003B822B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					FD5BDB3B2A02D8A8003B822B = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					FDF8DC682A03DE5C00D566DA = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = FD5BDB372A02D8A8003B822B /* Build configuration list for PBXProject "HealthTracker" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FD5BDB332A02D8A8003B822B;
+			productRefGroup = FD5BDB3D2A02D8A8003B822B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FD5BDB3B2A02D8A8003B822B /* HealthTracker */,
+				FDF8DC682A03DE5C00D566DA /* HealthTrackerWidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FD5BDB3A2A02D8A8003B822B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD5BDB472A02D8A9003B822B /* Preview Assets.xcassets in Resources */,
+				FD5BDB442A02D8A9003B822B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDF8DC672A03DE5C00D566DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDF8DC752A03DE5D00D566DA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FD5BDB382A02D8A8003B822B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDF8DC922A06DC8900D566DA /* RoundedCorner.swift in Sources */,
+				FDF8DC832A03F45C00D566DA /* FoodListView.swift in Sources */,
+				FDF8DC8F2A06DC3E00D566DA /* RationView.swift in Sources */,
+				FD5BDB4C2A02D8A9003B822B /* HealthTracker.xcdatamodeld in Sources */,
+				FDF8DCBD2A0933E000D566DA /* Ration+Extension.swift in Sources */,
+				FDF8DC812A03F3DA00D566DA /* StatisticsView.swift in Sources */,
+				FDF8DCDA2A09380500D566DA /* Date+Extension.swift in Sources */,
+				FDF8DCD02A0935F100D566DA /* Ration+CoreDataClass.swift in Sources */,
+				FDF8DCD22A0935F100D566DA /* Dish+CoreDataClass.swift in Sources */,
+				FDF8DC942A06DFDB00D566DA /* RationItem.swift in Sources */,
+				FDF8DCDC2A0971FA00D566DA /* AddDishModalView.swift in Sources */,
+				FDF8DC962A06E80300D566DA /* FoodListRow.swift in Sources */,
+				FD5BDB492A02D8A9003B822B /* Persistence.swift in Sources */,
+				FD5BDB422A02D8A8003B822B /* ContentView.swift in Sources */,
+				FDF8DC862A043FAC00D566DA /* DishView.swift in Sources */,
+				FDF8DC8B2A0648FC00D566DA /* Dish.swift in Sources */,
+				FDF8DC8D2A0656CC00D566DA /* Ration.swift in Sources */,
+				FDF8DCD72A09364300D566DA /* RationItem+Extension.swift in Sources */,
+				FDF8DCD12A0935F100D566DA /* Ration+CoreDataProperties.swift in Sources */,
+				FD5BDB402A02D8A8003B822B /* HealthTrackerApp.swift in Sources */,
+				FDF8DCD52A0935F100D566DA /* RationItem+CoreDataProperties.swift in Sources */,
+				FDF8DCD42A0935F100D566DA /* RationItem+CoreDataClass.swift in Sources */,
+				FDF8DC882A0552D900D566DA /* AppColour.swift in Sources */,
+				FDF8DCD32A0935F100D566DA /* Dish+CoreDataProperties.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDF8DC652A03DE5C00D566DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDF8DC732A03DE5C00D566DA /* HealthTrackerWidget.swift in Sources */,
+				FDF8DC712A03DE5C00D566DA /* HealthTrackerWidgetBundle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FDF8DC782A03DE5D00D566DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDF8DC682A03DE5C00D566DA /* HealthTrackerWidgetExtension */;
+			targetProxy = FDF8DC772A03DE5D00D566DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FD5BDB4D2A02D8A9003B822B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FD5BDB4E2A02D8A9003B822B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FD5BDB502A02D8A9003B822B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HealthTracker/HealthTracker.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HealthTracker/Preview Content\"";
+				DEVELOPMENT_TEAM = BXFZH2D9V2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = APetrenko.HealthTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FD5BDB512A02D8A9003B822B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HealthTracker/HealthTracker.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HealthTracker/Preview Content\"";
+				DEVELOPMENT_TEAM = BXFZH2D9V2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = APetrenko.HealthTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FDF8DC7B2A03DE5D00D566DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = HealthTrackerWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BXFZH2D9V2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HealthTrackerWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HealthTrackerWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = APetrenko.HealthTracker.HealthTrackerWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FDF8DC7C2A03DE5D00D566DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = HealthTrackerWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BXFZH2D9V2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HealthTrackerWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HealthTrackerWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = APetrenko.HealthTracker.HealthTrackerWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FD5BDB372A02D8A8003B822B /* Build configuration list for PBXProject "HealthTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD5BDB4D2A02D8A9003B822B /* Debug */,
+				FD5BDB4E2A02D8A9003B822B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD5BDB4F2A02D8A9003B822B /* Build configuration list for PBXNativeTarget "HealthTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD5BDB502A02D8A9003B822B /* Debug */,
+				FD5BDB512A02D8A9003B822B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDF8DC7D2A03DE5D00D566DA /* Build configuration list for PBXNativeTarget "HealthTrackerWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDF8DC7B2A03DE5D00D566DA /* Debug */,
+				FDF8DC7C2A03DE5D00D566DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FD5BDB4A2A02D8A9003B822B /* HealthTracker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FD5BDB4B2A02D8A9003B822B /* HealthTracker.xcdatamodel */,
+			);
+			currentVersion = FD5BDB4B2A02D8A9003B822B /* HealthTracker.xcdatamodel */;
+			path = HealthTracker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FD5BDB342A02D8A8003B822B /* Project object */;
+}
