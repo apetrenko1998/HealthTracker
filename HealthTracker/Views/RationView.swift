@@ -66,8 +66,27 @@ struct RationView: View {
                 }
             }
             .sheet(isPresented: $showingSheet) {
-                AddDishModalView()
+                AddDishModalView(viewModel: .init(), isPresented: .constant(true))
             }
         }
     }
+    
+//    private func prefillDBWithDefaultDishes() {
+//        let lasagna: Dish = .init(context: viewContext)
+//        lasagna.name = "Extra Easy Lasagna"
+//        lasagna.kcal = 135
+//        lasagna.photo = UIImage(named: "lasagna")?.jpegData(compressionQuality: 0.5)
+//
+//        let omelette: Dish = .init(context: viewContext)
+//        omelette.name = "Omelette"
+//        omelette.kcal = 150
+//        omelette.photo = UIImage(named: "omelette")?.jpegData(compressionQuality: 0.5)
+//
+//        do {
+//            try viewContext.save()
+//            debugPrint("✅ Ration for today was created")
+//        } catch {
+//            debugPrint("Failed to save context")
+//        }
+//    }
 }

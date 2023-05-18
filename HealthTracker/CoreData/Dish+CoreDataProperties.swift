@@ -2,7 +2,7 @@
 //  Dish+CoreDataProperties.swift
 //  HealthTracker
 //
-//  Created by Антон Петренко on 08/05/2023.
+//  Created by Антон Петренко on 16/05/2023.
 //
 //
 
@@ -16,8 +16,8 @@ extension Dish {
         return NSFetchRequest<Dish>(entityName: "Dish")
     }
 
-    @NSManaged public var name: String?
     @NSManaged public var kcal: Int16
+    @NSManaged public var name: String?
     @NSManaged public var photo: Data?
 
 }

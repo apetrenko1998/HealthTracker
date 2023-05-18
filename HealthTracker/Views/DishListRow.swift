@@ -1,5 +1,5 @@
 //
-//  FoodListRow.swift
+//  DishListRow.swift
 //  HealthTracker
 //
 //  Created by Антон Петренко on 06/05/2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FoodListRow: View {
+struct DishListRow: View {
     let dish: Dish
     
     var body: some View {

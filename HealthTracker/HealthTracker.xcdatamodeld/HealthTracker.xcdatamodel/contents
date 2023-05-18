@@ -4,6 +4,11 @@
         <attribute name="kcal" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="photo" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <entity name="Ration" representedClassName="Ration" syncable="YES">
         <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>

@@ -10,12 +10,9 @@ import PhotosUI
 import Photos
 
 struct AddDishModalView: View {
-    
-    @State private var newName: String = ""
-    @State private var kcal: Int16 = 0
-    @State private var photo: Data?
-    
-    @State private var imageSelection: [PhotosPickerItem] = []
+    @Environment(\.managedObjectContext) private var viewContext
+    @ObservedObject var viewModel: AddDishViewModel
+    @Binding var isPresented: Bool
     
     let numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
@@ -29,38 +26,29 @@ struct AddDishModalView: View {
     var body: some View {
         NavigationView {
             Form {
-                Image("placeholder")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 200, height: 200, alignment: .center)
+                DishImage(imageState: viewModel.imageState)
+                    .frame(width: 100, height: 100, alignment: .center)
                     .clipped()
                     .overlay(alignment: .bottomTrailing, content: {
-                        PhotosPicker(selection: $imageSelection,
-                                     maxSelectionCount: 1,
-                                     selectionBehavior: .default,
+                        PhotosPicker(selection: $viewModel.imageSelection,
                                      matching: .images,
-                                     preferredItemEncoding: .automatic) {
-                            Image(systemName: "pencil.circle.fill")
-                                .symbolRenderingMode(.multicolor)
-                                .foregroundColor(.accentColor)
+                                     preferredItemEncoding: .automatic,
+                                     photoLibrary: .shared()) {
+                            EmptyView()
                         }
-                        .padding()
                     })
-                
-                TextField(text: $newName, prompt: Text("Enter dish name")) {
-                    Text("Dish")
-                }
-                
+                TextField("Enter dish name", text: $viewModel.newName)
                 HStack(spacing: 16) {
                     Text("Kcal per 100g:")
-                    TextField("Kcal", value: $kcal, formatter: numberFormatter)
+                    TextField("Kcal", value: $viewModel.kcal, formatter: numberFormatter)
 
                 }
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        print("Add button was pressed")
+                        addProduct()
+                        isPresented.toggle()
                     } label: {
                         Text("Add")
                     }
@@ -69,11 +57,28 @@ struct AddDishModalView: View {
             }
             .navigationTitle("Add a dish")
         }
+        .animation(.none)
+    }
+    
+    private func addProduct() {
+        let newDish: Dish = .init(context: viewContext)
+        newDish.name = viewModel.newName
+        newDish.kcal = viewModel.kcal
+        if case let .success(currentImage) = viewModel.imageState {
+            newDish.photo = currentImage.jpegData(compressionQuality: 0.5)
+        }
+        
+        do {
+            _ = try viewContext.save()
+        } catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
     }
 }
 
 struct AddDishModalView_Previews: PreviewProvider {
     static var previews: some View {
-        AddDishModalView()
+        AddDishModalView(viewModel: .init(), isPresented: .constant(true))
     }
 }

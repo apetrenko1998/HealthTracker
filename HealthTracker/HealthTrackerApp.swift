@@ -26,7 +26,7 @@ struct HealthTrackerApp: App {
                         Label("Statistics", systemImage: "eye")
                     }
                 
-                FoodListView()
+                DishListView()
                     .environment(\.managedObjectContext, persistenceController.container.viewContext)
                     .tabItem {
                         Label("Food", systemImage: "carrot.fill")
